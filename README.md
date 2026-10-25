@@ -1,6 +1,5 @@
 import json
 
-# Lista global para armazenar os livros em memória
 livros = []
 
 
@@ -20,7 +19,6 @@ def cadastrar_livro():
   autor = input("Digite o autor do livro: ")
   ano = input("Digite o ano de publicação: ")
 
-  # Criando o dicionário do livro com status inicial disponível ("Sim")
   livro = {"titulo": titulo, "autor": autor, "ano": ano, "disponivel": "Sim"}
 
   livros.append(livro)
@@ -28,26 +26,18 @@ def cadastrar_livro():
 
 
 def listar_livros():
-  # Etapa 3: Listagem geral
   pass
 
 
 def buscar_livro():
-  # Etapa 3: Busca por filtro
   pass
-
 
 def emprestar_livro():
-  # Etapa 4: Empréstimo
   pass
-
 
 def devolver_livro():
-  # Etapa 4: Devolução
   pass
 
-
-# --- Loop Principal do Programa (Etapa 1) ---
 while True:
   exibir_menu()
   opcao = input("Escolha uma opção (1-6): ")
@@ -67,7 +57,6 @@ while True:
 
     import json
 
-# Lista global para armazenar os livros em memória
 livros = []
 
 
@@ -99,7 +88,6 @@ def listar_livros():
     print("Nenhum livro cadastrado no momento.")
     return
 
-  # Percorre a lista e exibe os detalhes de cada livro
   for i, livro in enumerate(livros):
     print(f"[{i}] Título: {livro['titulo']} | Autor: {livro['autor']} | Ano: {livro['ano']} | Disponível: {livro['disponivel']}")
 
@@ -162,7 +150,6 @@ def devolver_livro():
     print("Por favor, digite um número válido.")
 
 
-# --- Loop Principal do Programa ---
 while True:
   exibir_menu()
   opcao = input("Escolha uma opção (1-6): ")
@@ -186,10 +173,8 @@ while True:
     import json
 import os
 
-# Nome do arquivo JSON onde os dados serão salvos
 ARQUIVO_DADOS = "biblioteca.json"
 
-# Lista global para armazenar os livros em memória
 livros = []
 
 
@@ -356,11 +341,8 @@ def remover_livro():
   except ValueError:
     print("Por favor, digite um número válido.")
 
-
-# --- Inicialização do Programa ---
 carregar_dados()
 
-# --- Loop Principal do Programa ---
 while True:
   exibir_menu()
   opcao = input("Escolha uma opção (1-8): ")
